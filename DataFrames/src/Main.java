@@ -1,9 +1,10 @@
 import javax.xml.crypto.Data;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Main {
-    public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+    public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 //
         DataFrame df = new DataFrame(new String[] {"kol1","kol2", "kol3"}, new Class[] {MyString.class, MyInteger.class, MyInteger.class});
         df.addRow(new String[] {"a","2","1"});

@@ -11,9 +11,9 @@ public abstract class Value {
     public abstract boolean neq(Value someVal);
     public abstract boolean equals(Object other);
     //    public abstract int hashCode();
-//    public static Value create(String str) {
-//        return null;
-//    }
-    public abstract Value create(String str);
+    public static Value create(String str) {
+        return null;
+    }
+//    public abstract Value create(String str);
     public abstract void print();
 }

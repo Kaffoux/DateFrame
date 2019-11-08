@@ -59,7 +59,7 @@ class MyString extends Value {
 //        return this.hashCode();
         return 0;
     }
-    public Value create(String str) {
+    public static Value create(String str) {
         return new MyString(str);
     }
     public void print() {

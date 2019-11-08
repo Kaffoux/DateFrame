@@ -75,7 +75,7 @@ public class MyInteger extends Value{
 
     }
     //    public abstract int hashCode();
-    public Value create(String str) {
+    public static Value create(String str) {
         return new MyInteger(Integer.valueOf(str));
     }
     public void print() {

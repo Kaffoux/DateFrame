@@ -1,3 +1,4 @@
+import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 
@@ -23,9 +24,9 @@ class Column {
         date.add(value);
     }
 
-    public void addValue(String value) throws IllegalAccessException, InstantiationException {
+    public void addValue(String value) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         this.numberItems++;
-        date.add(type.newInstance().create(value));
+        date.add((Value) type.getMethod("create", String.class).invoke(null, value));
     }
 
 

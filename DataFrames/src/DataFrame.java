@@ -1,4 +1,5 @@
 import javax.xml.crypto.Data;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -33,7 +34,7 @@ class DataFrame {
         return numberRows;
     }
 
-    public void addRow(String[] Values) throws InstantiationException, IllegalAccessException {
+    public void addRow(String[] Values) throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         for (int i = 0; i < this.numberColumns; i++) {
             columns.get(i).addValue(Values[i]);
         }
@@ -86,7 +87,7 @@ class DataFrame {
         return newDF;
     }
 
-    public DFGroupBy groupBy(String name) throws IllegalAccessException, InstantiationException {
+    public DFGroupBy groupBy(String name) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         // ustalam numer kolumny względem której grupuję
         int groupCol = 0;
         for (int i = 0; i < this.numberColumns; i++) {
