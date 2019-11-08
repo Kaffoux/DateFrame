@@ -1,4 +1,4 @@
-public abstract class Value {
+public abstract class Value implements Cloneable {
     public abstract String toString();
     public abstract Value add(Value someVal);
     public abstract Value sub(Value someVal);

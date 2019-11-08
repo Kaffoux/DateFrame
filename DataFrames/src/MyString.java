@@ -1,10 +1,6 @@
 class MyString extends Value {
     private String val;
 
-    public MyString () {
-
-    }
-
     public MyString(String val) {
         this.val = val;
     }
@@ -64,5 +60,9 @@ class MyString extends Value {
     }
     public void print() {
         System.out.println(this.val);
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

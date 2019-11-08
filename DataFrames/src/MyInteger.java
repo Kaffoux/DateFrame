@@ -1,9 +1,5 @@
-public class MyInteger extends Value{
+public class MyInteger extends Value {
     private Integer val;
-
-    public MyInteger() {
-
-    }
 
     public MyInteger(Integer val) {
         this.val = val;
@@ -80,5 +76,9 @@ public class MyInteger extends Value{
     }
     public void print() {
         System.out.println(this.val);
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
